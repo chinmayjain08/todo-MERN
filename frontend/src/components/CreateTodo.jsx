@@ -23,12 +23,13 @@ export function CreateTodo(){
         <button style={{
             padding: 10,
             margin: 10
-        }} onclick = {()=>{
+        }} onClick = {()=>{
             fetch("http://localhost:3000/todo", {
                 method: "POST",
                 body: JSON.stringify({
                     title: title,
-                    description: description
+                    description: description,
+                    completed: false
                 }),
                 headers:{
                     "Content-type": "application/json"
